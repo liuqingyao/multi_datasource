@@ -11,6 +11,7 @@ import java.util.Map;
  */
 public class MultipleDataSource extends AbstractRoutingDataSource {
 
+    //保证线程安全
     private static final ThreadLocal<String> dataSourceKey = new ThreadLocal<String>();
 
     private static final Map<String, String> packageDataSource = new HashMap<String, String>();
@@ -23,8 +24,10 @@ public class MultipleDataSource extends AbstractRoutingDataSource {
         dataSourceKey.set(packageDataSource.get(pkgName));
     }
 
+    //实现AbstractRoutingDataSource的determineTargetDataSource
     protected Object determineCurrentLookupKey() {
         String dsName = dataSourceKey.get();
+        //阅后即焚
         dataSourceKey.remove();
         return dsName;
     }
