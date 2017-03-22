@@ -10,3 +10,37 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.idea
+logs
+*.iml
+.project
+.classpath
+.settings
+*/target
+*/.settings
+*/.classpath
+*/.project
+*/*.iml
+*/*.ipr
+*/*.iws
+*/build
+.DS_Store
+*/logs
+*.log
+*/scripts/*.pyc
+*/scripts/*.*~
+src/main/webapp/WEB-INF/classes
+src/main/resources/META-INF/persistence.xml
+src/main/webapp/META-INF/
+src/test/
+deployService.sh
+*/src/main/webapp/WEB-INF/decorators/jsdep.inc
+*/src/main/webapp/WEB-INF/decorators/jsdep_debug.inc
+*/src/main/webapp/static/js/site_js_dep.js
+*/src/main/webapp/WEB-INF/decorators/revision.properties
+target
+src/main/webapp/WEB-INF/decorators/header.inc
+src/main/webapp/static/media/meituan.mp3
+*.myeclipse*
+*.mymetadata*
+*META-INF*
